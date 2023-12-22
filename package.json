@@ -17,7 +17,7 @@
     "fastify-multipart",
     "upload",
     "file",
-    "blazity"
+    "wujingquan"
   ],
   "publishConfig": {
     "access": "public"
