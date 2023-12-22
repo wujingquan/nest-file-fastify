@@ -1,12 +1,13 @@
-import { MultipartFile as _MultipartFile } from "fastify-multipart";
-import { Readable } from "stream";
-
+import { MultipartFile as _MultipartFile } from "@fastify/multipart";
 import { Storage, StorageFile } from "../storage";
 
-export type MultipartFile = Omit<_MultipartFile, "file"> & {
+// export type MultipartFile = Omit<_MultipartFile, "file"> & {
+//   value?: any;
+//   file: Readable & { truncated?: boolean };
+// };
+export interface MultipartFile extends _MultipartFile {
   value?: any;
-  file: Readable & { truncated?: boolean };
-};
+}
 
 export const removeStorageFiles = async (
   storage: Storage,
